@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fretboardgtrsite.css">
+    <link rel="stylesheet" href="js/highlight/styles/github.css">
+    <link rel="icon" type="image/png" href="image/SVG/yellow.svg" />
+    <title>FretBoardGtr</title>
+</head>
+
+<body>
+    <!-- HEADER  -->
+    <div id='container-top-svg'>
+        <div id="svg-triangle">
+            <svg height="75" width="200">
+                <polygon points="0,0 200,0 100,75" style="fill:#037B89;" />
+            </svg>
+        </div>
+        <div class="container-fluid" id="topnav">
+            <nav>
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="mr-auto">
+                        <a href="index.html">Antoine Gibek</a>
+                    </div>
+                    <div class="d-flex">
+
+                        <div class='logotop'>
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <a class="d-flex justify-content-center align-items-center"
+                                    href="https://www.linkedin.com/in/antoine-gibek-7739a9169/"><i
+                                        class="fab fa-linkedin"></i></a>
+                            </div>
+
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <a class="d-flex justify-content-center align-items-center"
+                                    href="https://github.com/antscloud/"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+
+                        <a id='contactbutton' href="#contact">Contact</a>
+                    </div>
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- HEADER -->
+
+    <div class="container" id='right-panel'>
+
+        <div class="row part-content">
+            <div class="d-flex align-items-center justify-content-center w-100" id="titleofproject">
+
+                <div class="mr-auto">
+                    <h1><i class="fas fa-chevron-right chevron-color"></i> Site Web pour fretboardgtr</h1>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center" id="logoright">
+                    <div class="d-flex align-items-center justify-content-center" id="siteweb">
+                        <span>Site Web </span>
+                        <a href="https://fretboardgtr.com/app"> <img src="image/black_logo_square@2x.png" alt="logo"></a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span>Voir le code source</span>
+                        <a href="https://github.com/antscloud/fretboardgtrsite"> <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class='row part-content' id="principe-util-box">
+
+            <div class="d-flex justify-content-between w-100 flex-wrap" id='principe-util'>
+                <div class='d-flex justify-content-center'><b>CSS</b></div>
+                <div class='d-flex justify-content-center'><b>HTML</b></div>
+                <div class='d-flex justify-content-center'><b>Javascript (Event, JSON)</b></div>
+                <div class='d-flex justify-content-center'><b>Flask</b></div>
+                <div class='d-flex justify-content-center'><b>Route/Requêtes</b></div>
+
+            </div>
+        </div>
+
+
+        <div class='row part-content'>
+            <h2><i class="fas fa-chevron-right chevron-color"></i> Site Web</h2>
+            <p>Afin d'apprendre un peu plus le développement web mais aussi et surtout pour apprendre le déploiement d'une application Python sur un serveur j'ai décidé de coder un site web pour avoir une interface graphique du <a href="fretboardgtr.html" alt="projet fretboardgtr">projet de fretboardgtr</a>. Pour cela j'ai décidé d'utiliser Flask pour la partie serveur.</p> <br>
+
+            <div class="d-flex align-items-center justify-content-center w-100">
+                <a href="https://fretboardgtr.com/app" alt='fretboard app'><img id='desktop' src="image/UIfret.PNG " alt="UI du fretboard"></a>
+                <div id='mobile' class="d-flex w-100">
+                    <a href="https://fretboardgtr.com/app" alt="fretboard app"><div class="d-flex align-items-center justify-content-center"><img  src="image/UImobileFret.PNG " alt="UI du fretboard"></div></a>
+                    <a href="https://fretboardgtr.com/app" alt="fretboard app"><div class="d-flex align-items-center justify-content-center"><img  src="image/UImobileFret2.PNG " alt="UI du fretboard"></div></a>
+                </div>
+            </div>
+        </div>
+        <div class='row part-content'>
+            <h3><i class="fas fa-chevron-right chevron-color"></i> Fonctionnement général</h3>
+            
+            <p>Quand les différents paramètres sont remplis sur le site, un objet JSON est à chaque fois modifié. Par exemple quand on change une note dans le panneau de gauche, l'attribut "notes" de l'objet va être modifié. Et ceci pour chaque configuration. Quand on appuie sur le bouton "generate", une requête contenant cet objet est envoyé via une méthode POST. Lorsque le serveur la reçoit il va générer un diagramme en fonction de ces paramètres et enregistrer l'image dans un dossier particulier. Il renvoie alors une chaîne de caractères contenant un url. Cette url est une autre route qui permet de lire l'image sur le site. Chaque image est stocké avec un nom unique (uuid). A chaque requête Flask analyse si il y a plus de 100 images. Si tel est le cas, il en supprime 50 en commençant par les plus vieilles. Ainsi le nombre maximum d'image stocké sur le serveur est de 100 et permet de ne pas surcharger le stockage. </p>
+
+        </div>
+
+
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer d-flex justify-content-center" id="contact">
+
+        <div id="svg-triangle-footer">
+            <svg height="75" width="200">
+                <polygon points="0,0 200,0 100,75" style="fill:#037B89;" />
+            </svg>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center" id='footerlogocontainer'>
+
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <a class="d-flex flex-column justify-content-center align-items-center"
+                    href="https://www.linkedin.com/in/antoine-gibek-7739a9169/"><i class="fab fa-linkedin"></i>
+                    <span>Linkedin</span>
+                </a>
+            </div>
+
+            <div class="d-flex flex-column align-items-center">
+                <i class="fas fa-envelope"></i>
+                <span>antoine.gibek(at)gmail.com</span>
+            </div>
+
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <a class="d-flex flex-column justify-content-center align-items-center"
+                    href="https://github.com/antscloud/"><i class="fab fa-github"></i>
+                    <span>Github</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+</body>
+<script>
+    if (window.matchMedia("(max-width: 700px)").matches) {
+        svg = document.getElementsByTagName('svg')
+        svg[0].setAttribute("height", "50")
+        svg[0].setAttribute("width", "100")
+        svg[0].getElementsByTagName('polygon')[0].setAttribute("points", "0,0 100,0 50,50")
+
+        svg[1].setAttribute("height", "50")
+        svg[1].setAttribute("width", "100")
+        svg[1].getElementsByTagName('polygon')[0].setAttribute("points", "0,0 100,0 50,50")
+    } else {
+    }
+
+    document.getElementById('contactbutton').addEventListener('click',
+        function(){
+        document.getElementById('svg-triangle-footer').style.animationName='highlight-footer';
+    }
+    )
+</script>
+<script src="js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</html>

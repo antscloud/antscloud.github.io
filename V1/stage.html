@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/construction.css">
+    <link rel="stylesheet" href="js/highlight/styles/github.css">
+    <link rel="icon" type="image/png" href="image/chord_degree_name.svg" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>FretBoardGtr</title>
+</head>
+
+<body>
+    <div class="wrapper d-flex">
+        <div class="wrapper d-lg-flex">
+            <div class="sidebar-sm d-lg-none">
+                <nav id='navcolor-sm' class="navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand mb-0  h1" href="index.html">
+                        <img src="image/SVG/yellow.svg" alt="Logo principal" height="30px"
+                            class="d-inline-block align-top">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="construction.html">A propos <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="construction.html">Projets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="construction.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+            </div>
+
+
+            <nav id="sidebar-lg" class="d-none d-lg-block">
+                <div id="sidebar-lg-header">
+                    <a href="index.html">
+                        <img src="image/SVG/yellow.svg" alt="Logo principal" width="100px" height="100px">
+                    </a>
+                </div>
+                <ul id="list-lg-menu">
+                    <li> <a href="construction.html">Projets</a></li>
+                    <li> <a href="construction.html">Formation</a></li>
+                    <li> <a href="construction.html">Blog</a> </li>
+                </ul>
+
+                <div id="logos-lg">
+                    <a href="index.html"><i class="fas fa-home"></i></a>
+                    <a href="https://github.com/antscloud/"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/antoine-gibek-7739a9169/"><i class="fab fa-linkedin"></i></a>
+                </div>
+
+            </nav>
+
+            <div class="container" id='right-panel'>
+                <div id="big-title">
+                    <h1>Stage de M2</h1>
+                    <i class="fab fa-github"></i>
+                </div>
+
+                Sujet de stage :  Influence des vibrations mécaniques et du bruit électromagnétique
+                environnant sur l’efficacité du transport électrique à travers les
+                interfaces multi-contacts. Application au shuntage.
+                
+                Malgré l'énoncé relativement compliqué de ce stage il s'agissait tout simplement d'étudier le passage du courant électrique à travers 
+                deux surfaces métallique qui étaient soit immobile soit en mouvement l'une par rapport à l'autre. 
+
+
+
+                <h2>Explication</h2>
+
+                Lors du passage d'un courant électrique entre deux matériaux métallique en contact mécanique, certains phénomènes se produisent. En effet, si les deux surfaces sont en contact plus ou moins fortement, si l'une des deux est oxydée, si l'une est en mouvement ou non, on peut naturellement s'attendre à ce que le courant ne circule pas de la même manière. On peut alors voir qu'il y a une influence de certains paramètres sur le passage des électrons. En particulier, une surface parfaitement lisse n'existe pas, il y aura toujours des apérités au niveau microscopique, ceci induit ue lorsque l'on colle deux surfaces en métal, elle ne se toucheront qu'à certains endroit très petit appelé spot. La comportement du courant électrique est en partie liée à la géométrie de ces spots (bien qu'il y ai beaucoup d'autre influences tel que la conductivité des matériaux, les couches d'oxides, l'humidité résiduelle sur les métaux, la température ambiante, la tension admise etc). Le nombre de spot, ainsi que leur taille est déterminant, si il n'y a pas de spot, il n'y a pas de courant, un contact parfait ne serait en effet qu'un spot qui fait tout la taille du contact. Dans mon stage j'ai pu étudier et modéliser le comportement de ces spots, mais aussi tester par des experiences et un banc de mesure fabriqué maison, l'influence de la dynamique sur le contact mécanique sur le courant (si on fait rouler une pièce de métal sur une autre par exemple). Ce sujet s'inscrivait dans une tentative de compréhension d'une problématique industrielle connue. Lorsque les trains roulent, il y a un courant électrique relativement faible qui circule entre les roues et les rails, il permet de pouvoir reperer les trains sur des circuit de voie et de savoir précisement où ils sont en faisant une sorte de court circuit au niveau d'un récépteur, c'est ce que l'on appelle le shuntage. Cependant, il existe des cas où les trains ne sont pas repéré (même si cela est très rare), et qu'après des expertises il ne s'agit ni d'un défaut du récepteur, de communicaiton, de propreté du rail ou autre cas connu mais d'un défaut direct du passage du courant au sein du contact roue-rail. 
+                
+                Dans un premier temps, il s'agissait d'essayer de modéliser physiquement le passage du courant au travers des spots, et de voir si une modélisation à partir des équations de base de la physique permettaient de rendre compte de tout les phénomènes comme l'influence des spots entre eux ou encore la convergence vers la résistance de constriction. Dans l'étude, seul la convergence vers cette résistance a pu être mis en évidence mais pas l'influence. 
+                
+                
+                Dans un deuxième temps, une hypothèse selon laquelle la théorie du chaos pouvait intervenir  et venir appuyer l'imprédictiblité du phénomène a été testé. En effet, au contour des spots il y a de l'air, mais toujours une différence de potentielle entre les surfaces, une hypothèse émise était alors que des arcs électrique pouvaient se former même à faible courant (phénomène connu à fort courant), et dans certaines configuration (avec une impédance, un effet capacitif diretment liée aux surfaces) faire naitre un mouvement chaotique des électrons. Pour se faire, une étude de la fréquence des arcs électrique a été mis en place sur une méthode innovante qui consistait à juste enregistrer les arcs claquer avec un microphone et traiter ces pics numériquement. Ensuite, il aurait fallu integrer cette fréquence dans un montage équivalent au système, sous simulink par exemple, et voir si le phénomène chaotique voyait le jour. En effet certains articles montre que ce phénomène peut arriver dans des circuits électriques simple. 
+
+                Enfin, un banc de mesure a été construit pour tester certaines hhypothèses. Ce dernier reproduisait la physique du contact roue-rail et comporter deux rails alimentés par une tension, un essieu, et deux roues qui navigait sur ce dit rail. Cela a permis de mesurer la qualité du passage du courant en fonciton de la fréquence du cournat et de la propreté du rail (diverse matériaux ont été déposé sur les rails). Certaines distributions statistique sont apparue comme modélisation du bruit, et ont permis dans une certaine mesure de donner une méthode de mesure de la qualité du contact. 
+
+
+                https://antscloud.github.io/masterstage/Programs/EDP_SELF.html
+
+
+                La plupart du code utilisé est disponible ici. J'ai pu me rendre après avoir passé du temps sur des projets informatiques à quel point ce code avait été mal écrit, non pas tellement en terme de mathématiques mais en terme de structure de projet. J'ai appris un peu plus tard à me servir de l'objet, de github mais surtout à essayer de mieux noter mes variables ainsi que de ne pas me repeter.  Mais bon il faut bien commencer quelque part. 
+
+                https://github.com/antscloud/masterstage
+
+
+
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Ethanol/Stat_bruit_weibull.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Ethanol/Rdistribution.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Ethanol/Stat_bruit.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Ethanol/Stat_bruit_weibull2.html
+
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Graisse%20étalée/Alternatif_graisse_etalee.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Graisse%20étalée/Rdistribution.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Graisse%20étalée/Stat_bruit.html
+
+
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Graisse/Alternatif_graisse.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Graisse/Stat_bruit.html
+
+
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Graisse/Data/Experimentation/Alternatif/Alternatif.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Graisse/Data/Experimentation/Alternatif/Rdistribution.html
+
+                https://antscloud.github.io/masterstage/Data/Experimentation/100hz/Graisse/Data/Experimentation/Branly_rail/Branly_rail.html
+
+                https://github.com/antscloud/masterstage/raw/master/Memoire/memoire.pdf
+
+                https://antscloud.github.io/masterstage/Data/Experimentation/Graisee_CC/Plusieurs_essieu.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/Graisee_CC/Rdistribution.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/Graisee_CC/Stat_bruit.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/Graisee_CC/Stat_bruit_gengamma.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/Graisee_CC/Stat_bruit_weibull.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/Graisee_CC/graisse_cc.html
+
+
+                https://antscloud.github.io/masterstage/Data/Experimentation/Relaxation/Relaxation.html
+
+                https://antscloud.github.io/masterstage/Data/Experimentation/Relaxation/Vitesse_shunt/Stat_bruit.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/Relaxation/Vitesse_shunt/Test_shunt.html
+
+
+                https://antscloud.github.io/masterstage/Data/Experimentation/Relaxation/Vitesse_shunt/Vitesse_shunt_vis_ponce/Plusieurs_essieu.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/Relaxation/Vitesse_shunt/Vitesse_shunt_vis_ponce/Rdistribution.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/Relaxation/Vitesse_shunt/Vitesse_shunt_vis_ponce/Stat_bruit.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/Relaxation/Vitesse_shunt/Vitesse_shunt_vis_ponce/Stat_bruit_weibull.html
+                https://antscloud.github.io/masterstage/Data/Experimentation/Relaxation/Vitesse_shunt/Vitesse_shunt_vis_ponce/Vitesse_shunt_vis_ponce.html
+
+
+
+
+                https://antscloud.github.io/masterstage/Programs/EDP_SELF.html
+
+
+
+
+            </div>
+
+
+</html>

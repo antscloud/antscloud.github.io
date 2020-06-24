@@ -1,16 +1,9 @@
-/*
-blueish #264653
-light blueish #2a9d8f
-Yellow #e9c46a
-Sandy Brown #f4a261
-salmon #e76f51
-*/
-
 body {
     font-family: 'Lato', sans-serif;
     font-family: 'Montserrat', sans-serif;
     color: black;
-    background: rgb(253, 253, 253);
+    background: #F0F0F0;
+    font-size:15px;
 }
 
 a:hover {
@@ -22,165 +15,135 @@ a {
     color: inherit;
 }
 
-.wrapper {
-    width: 100%;
-}
-
-/* Small header */
-#navcolor-sm {
-    width: 100%;
-    background: linear-gradient(90deg, rgba(2, 195, 154, 0.6) 0%, rgba(5, 102, 141, 0.6) 150%);
-}
-
-#logos-sm{
-    margin: 30px 0;
-}
-
-#logos-sm div {
-    margin: 0 20px;
-    width: 35px;
-    height: 35px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    background: linear-gradient(45deg, rgba(2, 195, 154, 1) 0%, rgba(5, 102, 141, 1) 100%);
-    box-shadow: 1px 1px 2px rgba(5, 102, 141, 1);
-}
-
-#logos-sm div i {
-    color: whitesmoke;
-    font-size: 18px;
-}
-
-
-
-/* large header  sidebar */
-#logos-lg {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    margin-bottom: 25px;
-    text-align: center;
-    font-size: 20px;
-    color: whitesmoke;
-}
-
-#logos-lg a {
-    color: white;
-    display: inline-block;
-}
-
-#logos-lg i {
-    padding: 0 10px;
-}
-
-#logos-lg a:hover {
-    color: #e9c46a;
-    text-decoration: none;
-}
-
-#sidebar-lg {
-    display: block;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    min-width: 200px;
-    max-width: 200px;
-    height: 100vh;
-    background: linear-gradient(90deg, rgba(2, 195, 154, 0.6) 0%, rgba(5, 102, 141, 0.6) 150%), url('../image/trees.jpg');
-}
-
-#sidebar-lg li {
-    list-style-type: none;
-    color: whitesmoke;
-    font-size: 16px;
-    font-weight: 100;
-    margin: 0px 30px 0 30px;
-    padding: 10px 0;
-    border-bottom: 0.5px grey solid;
-}
-
-#sidebar-lg li a {
-    color: whitesmoke;
-}
-
-#sidebar-lg li a:hover {
-    color: #e9c46a;
-    text-decoration: none;
-}
-
-#sidebar-lg-header {
-    text-align: center;
-}
-
-#sidebar-lg-header img {
-    margin: 50px 0 0px 0;
-}
-
-#list-lg-menu {
-    padding: 100px 0;
-    margin: 0;
-}
 
 
 /* Content */
-#projets {
-    padding-left: 10px;
-    border-left: 5px solid rgba(2, 195, 154, 1);
-}
 
-#projets h1 {
-    margin: 0;
+
+h1 {
+    margin: 0 0 10px 0;
     display: block;
-    font-size: 30px;
-    font-weight: 800;
-}
-.resume {
-    font-size: 16px;
-    margin-left: 12.5px;
-    margin-top: 15px;
+    font-size: 1.8em;
+    font-weight: 600;
 }
 
-#big-title {
-    margin-top: 50px;
-    padding-left: 10px;
-    border-left: 5px solid rgba(2, 195, 154, 1);
-}
 
-#big-title p {
-    margin-bottom: -5px;
-    margin-top: -5px;
+h2 {
+    margin: 0px 0 10px 0;
     display: block;
-    font-size: 20px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+
+h3 {
+    margin: 10px 0 10px 0;
+    display: block;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+
+h4 {
+    margin: 10px 0 10px 0;
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
+.chevron-color{
+    color:#F26419
+}
+
+
+/* HEADER */
+
+
+#topnav{
+    background-color:#037B89;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 0px;
+}
+#topnav nav>div{
+margin: 0 10px;
+}
+
+#container-top-svg{
+    position: relative;
+}
+#container-top-svg a:hover{
+    color:#bbbbbb;
+
+}
+
+.logotop{
+    display: flex;
+    margin: 0 40px 0 0;
+
+}
+.logotop i{
+
+    margin: 0 0 0 20px;
+
+}
+#svg-triangle{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-filter: drop-shadow( 0px 2px 2px rgba(0, 0, 0, .3));
+    filter: drop-shadow( 0px 2px 2px rgba(0, 0, 0, .3));
+}
+
+
+/* BOX */
+
+
+.part-content{
+    background-color: #F8F8F8;
+    width: 100%;
+    margin: 40px 0;
+    padding: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    border-radius: 2px;
+}
+
+/* Content */
+
+#langage-skill-container div{
+    width: 75px;
+    margin: 10px;
+
+}
+#iambox p {
+    margin-bottom:-0.5em;
+    margin-left: 1.7em;
     font-weight: 100;
 }
-
-#big-title h1 {
-    margin: 0;
-    margin-bottom: -8px;
-    display: block;
-    font-size: 30px;
-    font-weight: 800;
-}
-
 
 
 
 .box-proj {
-    border-left: 5px solid rgba(2, 195, 154, 1);
-    padding-left: 20px;
+    border-left: 5px solid #F26419;
     width: 100%;
-    padding-right: 20px;
-    margin: 20px 0;
+    background-color: #F8F8F8;
+    margin: 10px 0;
+    padding: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    border-radius: 2px;
+    height: 330px;
 }
 
 .box-proj h2 {
     padding: 10px 0 0 0;
-    font-size: 20px;
+    font-size: 1.3em;
     font-weight: 800;
 }
 
 .box-proj p {
-    font-size: 14px;
+    font-size: 0.8em;
     font-weight: 100;
 }
 
@@ -192,5 +155,134 @@ a {
     color: #f4a261;
 }
 
+#maybe{
+    display: none;
+}
+.diplome{
+    font-size: 0.9em;
+}
 
+.diplome ul{
+        list-style-type: none;
+}
+
+.diplome ul i{
+    font-size: 0.8em;
+    color:black;
+}
+
+/* FOOTER */
+
+.footer{
+    /* If parent has no padding, margin of child apply to parent. So if we want the margin work we can add a little padding to parent or overflow:auto */
+    position: relative;
+    background: linear-gradient(180deg, rgba(3,123,137,1) 0%, rgba(0,63,103,1) 100%);
+    color: white;
+}
+
+#svg-triangle-footer{
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+    -webkit-filter: drop-shadow( 0px 2px 2px rgba(0, 0, 0, .3));
+    filter: drop-shadow( 0px 2px 2px rgba(0, 0, 0, .3));
+}
+
+.footer a:hover{
+    color:#bbbbbb;
+
+}
+
+#footerlogocontainer{
+    width: 70%;
+    margin: 75px 0 60px 0;
+    display: flex;
+    justify-content: space-between!important;
+}
+#footerlogocontainer{
+font-size: 0.8em;
+}
+#footerlogocontainer div{
+    width: 200px;
+    }
+    
+#footerlogocontainer div i{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+
+@media(max-width:576px){
+    .logotop{
+        display: flex;
+        margin: 0 20px 0 0;
+    
+    }
+
+    #footerlogocontainer{
+        width: 100%;
+        margin: 50px 0 50px 0;
+        display: flex;
+        justify-content: space-between!important;
+    }
+
+    #titleofproject{
+        flex-direction: column;
+    }
+
+    #logoright{
+        margin-right: auto;
+    }
+    .box-proj {
+        height: 360px;
+    }
+    #principe-util{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    
+    }
+    #principe-util div {
+        font-size: 12px!important;
+        margin: 5px 0 !important;
+        margin-right:auto!important;
+    
+    }
+}
+
+@keyframes highlight-footer {
+    0% {
+        top: -75px;
+    }
+  
+    25% {
+        top:-90px;
+    }
+      
+    35% {
+        top:-75px;
+    }
+    50% {
+        top:-90px;
+    }
+    65% {
+        top:-75px;
+    }
+    100% {
+        top:-20px;
+    }
+  }
+
+#svg-triangle-footer{
+    animation-duration: 2s;
+}
+
+#principe-util-box{
+margin: -20px 0;
+}
+#principe-util div {
+    font-size: 14px;
+    margin: 0 10px;
+
+}
 /* A partir d'ici code de fretboard*/

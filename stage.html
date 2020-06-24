@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stage.css">
+    <link rel="stylesheet" href="js/highlight/styles/github.css">
+    <link rel="icon" type="image/png" href="image/SVG/yellow.svg" />
+    <title>FretBoardGtr</title>
+</head>
+
+<body>
+    <!-- HEADER  -->
+    <div id='container-top-svg'>
+        <div id="svg-triangle">
+            <svg height="75" width="200">
+                <polygon points="0,0 200,0 100,75" style="fill:#037B89;" />
+            </svg>
+        </div>
+        <div class="container-fluid" id="topnav">
+            <nav>
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="mr-auto">
+                        <a href="index.html">Antoine Gibek</a>
+                    </div>
+                    <div class="d-flex">
+
+                        <div class='logotop'>
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <a class="d-flex justify-content-center align-items-center"
+                                    href="https://www.linkedin.com/in/antoine-gibek-7739a9169/"><i
+                                        class="fab fa-linkedin"></i></a>
+                            </div>
+
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <a class="d-flex justify-content-center align-items-center"
+                                    href="https://github.com/antscloud/"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+
+                        <a id='contactbutton' href="#contact">Contact</a>
+                    </div>
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- HEADER -->
+
+    <div class="container" id='right-panel'>
+
+        <div class="row part-content">
+            <div class="d-flex align-items-center justify-content-center w-100" id="titleofproject">
+
+                <div class="mr-auto">
+                    <h1><i class="fas fa-chevron-right chevron-color"></i> Stage de master</h1>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center" id="logoright">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span>Mémoire</span>
+                        <a href="https://github.com/antscloud/masterstage/raw/master/Memoire/memoire.pdf"><i class="fas fa-file-pdf"></i></a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <span>Voir le code source</span>
+                        <a href="https://github.com/antscloud/masterstage"> <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class='row part-content' id="principe-util-box">
+
+            <div class="d-flex justify-content-between w-100 flex-wrap" id='principe-util'>
+                <div class='d-flex justify-content-center'><b>Numpy</b></div>
+                <div class='d-flex justify-content-center'><b>MatPlotLib</b></div>
+                <div class='d-flex justify-content-center'><b>Physique</b></div>
+                <div class='d-flex justify-content-center'><b>Jupyter Notebook</b></div>
+
+            </div>
+
+        </div>
+        <div class="part-content">
+            <h2><i class="fas fa-chevron-right chevron-color"></i> Sujet de stage</h2>
+            Influence des vibrations mécaniques et du bruit électromagnétique
+            environnant sur l’efficacité du transport électrique à travers les
+            interfaces multi-contacts. Application au shuntage.
+
+            Malgré l'énoncé relativement compliqué de ce stage il s'agissait tout simplement d'étudier le passage du
+            courant
+            électrique à travers
+            deux surfaces métalliques qui étaient soit immobiles soit en mouvements l'une par rapport à l'autre.
+
+        </div>
+
+
+        <div class='part-content'>
+            <h2><i class="fas fa-chevron-right chevron-color"></i> Explication</h2>
+
+            Lors du passage d'un courant électrique entre deux matériaux métalliques en contact mécanique, certains
+            phénomènes se produisent. En effet, si les deux surfaces sont en contact plus ou moins fortement, si l'une
+            des
+            deux est oxydée, si l'une est en mouvement ou non, on peut naturellement s'attendre à ce que le courant ne
+            circule pas de la même manière. On peut alors voir qu'il y a une influence de certains paramètres sur le
+            passage
+            des électrons. En particulier, une surface parfaitement lisse n'existe pas, il y aura toujours des aspérités
+            au
+            niveau microscopique, ceci induit que lorsque l'on colle deux surfaces en métal, elle ne se toucheront qu'à
+            certains endroit très petit appelés spot. La comportement du courant électrique est en partie liée à la
+            géométrie
+            de ces spots (bien qu'il y ai beaucoup d'autres influences telles que la conductivité des matériaux, les couches
+            d'oxides, l'humidité résiduelle sur les métaux, la température ambiante, la tension admise etc). Le nombre
+            de
+            spots, ainsi que leur taille, est déterminant, si il n'y a pas de spot, il n'y a pas de courant, un contact
+            parfait ne serait en effet qu'un spot qui fait tout la taille du contact. Dans mon stage j'ai pu étudier et
+            modéliser le comportement de ces spots, mais aussi tester par des experiences et un banc de mesure fabriqué
+            maison, l'influence de la dynamique sur le contact mécanique sur le courant (si on fait rouler une pièce de
+            métal sur une autre par exemple). Ce sujet s'inscrivait dans une tentative de compréhension d'une
+            problématique
+            industrielle connue. Lorsque les trains roulent, il y a un courant électrique relativement faible qui
+            circule
+            entre les roues et les rails, il permet de pouvoir repérer les trains sur des circuits de voie et de savoir
+            précisément où ils sont en créant une sorte de court-circuit au niveau d'un récepteur, c'est ce que l'on
+            appelle le shuntage. Cependant, il existe des cas où les trains ne sont pas repérés (même si cela est très
+            rare),
+            et qu'après des expertises il ne s'agit ni d'un défaut du récepteur, de communication, de propreté du rail
+            ou
+            autre cas connu mais d'un défaut direct du passage du courant au sein du contact roue-rail.
+<br>
+<br>
+            Dans un premier temps, il s'agissait d'essayer de modéliser physiquement le passage du courant au travers
+            des
+            spots, et de voir si une modélisation à partir des équations de base de la physique permettaient de rendre
+            compte de tout les phénomènes comme l'influence des spots entre eux ou encore la convergence vers la
+            résistance
+            dite de constriction. Dans l'étude, seule la convergence vers cette résistance a pu être mis en évidence mais pas
+            l'influence.
+<br>
+<br>
+
+            Dans un deuxième temps, une hypothèse selon laquelle la théorie du chaos pouvait intervenir et venir appuyer
+            l'imprédictibilité du phénomène a été testée. En effet, au contour des spots il y a de l'air, mais toujours
+            une
+            différence de potentiel entre les surfaces, une hypothèse émise était alors que des arcs électrique
+            pouvaient
+            se former même à faible courant (phénomène connue à fort courant), et dans certaines configurations précises (avec une
+            impédance et un effet capacitif directement lié aux surfaces) faire naître un mouvement chaotique des
+            électrons.
+            Pour se faire, une étude de la fréquence des arcs électrique a été mis en place sur une méthode innovante
+            qui
+            consistait à enregistrer les arcs claquer avec un microphone et traiter ces pics numériquement.
+            Ensuite,
+            il aurait fallu intégrer cette fréquence dans un montage équivalent au système, sous Simulink par exemple,
+            et
+            voir si le phénomène chaotique voyait le jour. En effet certains articles montre que ce phénomène peut
+            arriver
+            dans des circuits électriques simple. Cependant faut de temps et de matériels adéquats, cette hypothèse n'a pas pu être testée.
+
+            Enfin, un banc de mesure a été construit pour tester certaines hypothèses. Ce dernier reproduisait partiellement la
+            physique
+            du contact roue-rail et comportait deux rails alimentés par une tension, un essieu, et deux roues qui
+            naviguait
+            sur ce dit rail. Cela a permis de mesurer la qualité du passage du courant en fonction de la fréquence du
+            courant et de la propreté du rail (divers matériaux ont été déposés sur les rails). Certaines distributions
+            statistiques sont apparues comme modélisation du bruit, et ont permis dans une certaine mesure de donner une
+            méthode de mesure de la qualité du contact.
+        </div>
+
+        <div class="part-content">
+            <h2><i class="fas fa-chevron-right chevron-color"></i> Codes </h2>
+            La plupart du code utilisé est disponible ci-dessous. J'ai pu me rendre après avoir passé du temps sur des projets
+            informatiques différents à quel point ce code n'était pas optimisé, non pas tellement en terme de
+            mathématiques mais en
+            terme de structure de projet. Le problème principal étant qu'il ne s'agissait la plupart du temps que de prototypage, si bien qu'une meilleure organisation aurait permis d'aller plus vite sur la fin du stage.  
+            En effet, il s'agissait de mes débuts en Python et j'ai appris un peu plus tard à me servir de l'objet, de github mais surtout de principes plus fondamentaux en programmation comme essayer de ne pas se répéter, de bien noter ses variables etc.
+
+
+            <div class="d-flex justify-content-center align-items-center">
+                <a href="https://github.com/antscloud/masterstage">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <i class="fab fa-github" style='font-size: 25px;'></i>
+                Voir le code
+                </div> 
+            </a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer d-flex justify-content-center" id="contact">
+
+        <div id="svg-triangle-footer">
+            <svg height="75" width="200">
+                <polygon points="0,0 200,0 100,75" style="fill:#037B89;" />
+            </svg>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center" id='footerlogocontainer'>
+
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <a class="d-flex flex-column justify-content-center align-items-center"
+                    href="https://www.linkedin.com/in/antoine-gibek-7739a9169/"><i class="fab fa-linkedin"></i>
+                    <span>Linkedin</span>
+                </a>
+            </div>
+
+            <div class="d-flex flex-column align-items-center">
+                <i class="fas fa-envelope"></i>
+                <span>antoine.gibek(at)gmail.com</span>
+            </div>
+
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <a class="d-flex flex-column justify-content-center align-items-center"
+                    href="https://github.com/antscloud/"><i class="fab fa-github"></i>
+                    <span>Github</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+</body>
+<script>
+    if (window.matchMedia("(max-width: 700px)").matches) {
+        svg = document.getElementsByTagName('svg')
+        svg[0].setAttribute("height", "50")
+        svg[0].setAttribute("width", "100")
+        svg[0].getElementsByTagName('polygon')[0].setAttribute("points", "0,0 100,0 50,50")
+
+        svg[1].setAttribute("height", "50")
+        svg[1].setAttribute("width", "100")
+        svg[1].getElementsByTagName('polygon')[0].setAttribute("points", "0,0 100,0 50,50")
+    } else {
+    }
+
+    document.getElementById('contactbutton').addEventListener('click',
+        function(){
+        document.getElementById('svg-triangle-footer').style.animationName='highlight-footer';
+    }
+    )
+</script>
+<script src="js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</html>

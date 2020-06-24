@@ -1,0 +1,208 @@
+/*
+blueish #264653
+light blueish #2a9d8f
+Yellow #e9c46a
+Sandy Brown #f4a261
+salmon #e76f51
+*/
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background: rgb(253, 253, 253);
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+/* Small header */
+#navcolor-sm {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2, 195, 154, 0.6) 0%, rgba(5, 102, 141, 0.6) 150%);
+}
+
+#logos-sm{
+    margin: 30px 0;
+}
+
+#logos-sm div {
+    margin: 0 20px;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: linear-gradient(45deg, rgba(2, 195, 154, 1) 0%, rgba(5, 102, 141, 1) 100%);
+    box-shadow: 1px 1px 2px rgba(5, 102, 141, 1);
+}
+
+#logos-sm div i {
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+
+
+/* large header  sidebar */
+#logos-lg {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+#logos-lg a {
+    color: white;
+    display: inline-block;
+}
+
+#logos-lg i {
+    padding: 0 10px;
+}
+
+#logos-lg a:hover {
+    color: #e9c46a;
+    text-decoration: none;
+}
+
+#sidebar-lg {
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    min-width: 200px;
+    max-width: 200px;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(2, 195, 154, 0.6) 0%, rgba(5, 102, 141, 0.6) 150%), url('../image/trees.jpg');
+}
+
+#sidebar-lg li {
+    list-style-type: none;
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 100;
+    margin: 0px 30px 0 30px;
+    padding: 10px 0;
+    border-bottom: 0.5px grey solid;
+}
+
+#sidebar-lg li a {
+    color: whitesmoke;
+}
+
+#sidebar-lg li a:hover {
+    color: #e9c46a;
+    text-decoration: none;
+}
+
+#sidebar-lg-header {
+    text-align: center;
+}
+
+#sidebar-lg-header img {
+    margin: 50px 0 0px 0;
+}
+
+#list-lg-menu {
+    padding: 100px 0;
+    margin: 0;
+}
+
+
+/* Content */
+#projets {
+    padding-left: 10px;
+    border-left: 5px solid rgba(2, 195, 154, 1);
+}
+
+#projets h1 {
+    margin: 0;
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+}
+.resume {
+    font-size: 16px;
+    margin-left: 12.5px;
+    margin-top: 15px;
+}
+
+#big-title {
+    margin-top: 50px;
+    padding-left: 10px;
+    border-left: 5px solid rgba(2, 195, 154, 1);
+}
+
+#big-title p {
+    margin-bottom: -5px;
+    margin-top: -5px;
+    display: block;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#big-title h1 {
+    margin: 0;
+    margin-bottom: -8px;
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+
+
+.box-proj {
+    border-left: 5px solid rgba(2, 195, 154, 1);
+    padding-left: 20px;
+    width: 100%;
+    padding-right: 20px;
+    margin: 20px 0;
+}
+
+.box-proj h2 {
+    padding: 10px 0 0 0;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.box-proj p {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.box-proj a {
+    color: rgba(5, 102, 141, 1);
+}
+
+.box-proj a:hover {
+    color: #f4a261;
+}
+
+#maybe{
+    display: none;
+}
+
+#nav2{
+    background-color: rgba(2, 195, 154, 1);
+    color: white;
+    font-weight: 500;
+}
+
+#nav2 div{
+    margin: 15px;
+}
+/* A partir d'ici code de fretboard*/

@@ -1,27 +1,20 @@
-h2 {
-    font-weight: 800;
-    font-size: 22px;
-    padding-left: 10px;
-    border-left: 5px solid rgba(2, 195, 154, 1);
+
+.container  a {
+    color: rgba(5, 102, 141, 1);
 }
 
-h3 {
-    font-weight: 800;
-    font-size: 20px;
-    padding-left: 10px;
-    border-left: 5px solid rgba(2, 195, 154, 1);
-    margin-left: 30px;
-    margin-top: 20px;
+.container a:hover {
+    color: #f4a261;
+}
+pre{
+    margin: 0;
 }
 
-h4 {
-    font-weight: 800;
-    font-size: 18px;
-    padding-left: 10px;
-    border-left: 5px solid rgba(2, 195, 154, 1);
-    margin-left: 60px;
-    margin-top: 20px;
-}
+/* CODE HIGHLIGHT */
+
+.hljs {
+    background: #f0f0f0 !important;
+  }
 
 .inline-code2 code.hljs {
     display: inline;
@@ -45,24 +38,8 @@ h4 {
     font-family: "Sans Mono", "Consolas", "Courier", monospace;
 }
 
-a {
-    color: rgba(5, 102, 141, 1);
-}
+/* CODE HIGHLIGHT */
 
-a:hover {
-    color: #f4a261;
-}
-
-#sidebar-lg-header img {
-    max-width: none;
-    margin: 50px 0 0px 0;
-}
-
-.sidebar-sm img {
-    max-width: none;
-    padding: 0;
-    margin: 0;
-}
 
 @media (max-width: 992px) {
     .accord img {
@@ -73,8 +50,21 @@ a:hover {
         max-width: 100%;
         height: auto;
     }
+    .inline-code2 {
+        max-width: 100%;
+        display: inline-block;
+        overflow-x: scroll;
+    }
 }
 
 .code {
     overflow-x: scroll;
+}
+
+#logoright span{
+    font-size: 0.8em;
+}
+#logoright i{
+    font-size: 1.5em;
+    margin: 5px;
 }

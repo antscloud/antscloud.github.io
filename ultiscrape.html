@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fretboardgtrsite.css">
+    <link rel="stylesheet" href="css/stage.css">
     <link rel="stylesheet" href="js/highlight/styles/github.css">
     <link rel="icon" type="image/png" href="image/SVG/yellow.svg" />
-    <title>FretBoardGtr App</title>
+    <title>UltiScrape</title>
 </head>
 
 <body>
@@ -61,17 +61,13 @@
             <div class="d-flex align-items-center justify-content-center w-100" id="titleofproject">
 
                 <div class="mr-auto">
-                    <h1><i class="fas fa-chevron-right chevron-color"></i> Site Web pour fretboardgtr</h1>
+                    <h1><i class="fas fa-chevron-right chevron-color"></i> Command Line Interface Web Scraper</h1>
                 </div>
 
                 <div class="d-flex align-items-center justify-content-center" id="logoright">
-                    <div class="d-flex align-items-center justify-content-center" id="siteweb">
-                        <span>Site Web </span>
-                        <a href="https://fretboardgtr.com/app"> <img src="image/black_logo_square@2x.png" alt="logo"></a>
-                    </div>
                     <div class="d-flex align-items-center justify-content-center">
                         <span>Voir le code source</span>
-                        <a href="https://github.com/antscloud/fretboardgtrsite"> <i class="fab fa-github"></i></a>
+                        <a href="https://github.com/antscloud/ultimateguitarscraper"> <i class="fab fa-github"></i></a>
                     </div>
                 </div>
 
@@ -81,35 +77,72 @@
         <div class='row part-content' id="principe-util-box">
 
             <div class="d-flex justify-content-between w-100 flex-wrap" id='principe-util'>
-                <div class='d-flex justify-content-center'><b>CSS</b></div>
-                <div class='d-flex justify-content-center'><b>HTML</b></div>
-                <div class='d-flex justify-content-center'><b>Javascript (Event, JSON)</b></div>
-                <div class='d-flex justify-content-center'><b>Flask</b></div>
-                <div class='d-flex justify-content-center'><b>Route/Requêtes</b></div>
+                <div class='d-flex justify-content-center'><b>Request</b></div>
+                <div class='d-flex justify-content-center'><b>Regex</b></div>
+                <div class='d-flex justify-content-center'><b>Beautiful Soup</b></div>
+                <div class='d-flex justify-content-center'><b>Selenium</b></div>
+                <div class='d-flex justify-content-center'><b>Json</b></div>
 
             </div>
-        </div>
-
-
-        <div class='row part-content'>
-            <h2><i class="fas fa-chevron-right chevron-color"></i> Site Web</h2>
-            <p>Afin d'apprendre un peu plus le développement web mais aussi et surtout pour apprendre le déploiement d'une application Python sur un serveur j'ai décidé de coder un site web pour avoir une interface graphique du <a href="fretboardgtr.html" alt="projet fretboardgtr">projet de fretboardgtr</a>. Pour cela j'ai décidé d'utiliser Flask pour la partie serveur.</p> <br>
-
-            <div class="d-flex align-items-center justify-content-center w-100">
-                <a href="https://fretboardgtr.com/app" alt='fretboard app'><img id='desktop' src="image/UIfret.PNG " alt="UI du fretboard"></a>
-                <div id='mobile' class="d-flex w-100">
-                    <a href="https://fretboardgtr.com/app" alt="fretboard app"><div class="d-flex align-items-center justify-content-center"><img  src="image/UImobileFret.PNG " alt="UI du fretboard"></div></a>
-                    <a href="https://fretboardgtr.com/app" alt="fretboard app"><div class="d-flex align-items-center justify-content-center"><img  src="image/UImobileFret2.PNG " alt="UI du fretboard"></div></a>
-                </div>
-            </div>
-        </div>
-        <div class='row part-content'>
-            <h3><i class="fas fa-chevron-right chevron-color"></i> Fonctionnement général</h3>
-            
-            <p>Quand les différents paramètres sont remplis sur le site, un objet JSON est à chaque fois modifié. Par exemple quand on change une note dans le panneau de gauche, l'attribut "notes" de l'objet va être modifié. Et ceci pour chaque configuration. Quand on appuie sur le bouton "generate", une requête contenant cet objet est envoyé via une méthode POST. Lorsque le serveur la reçoit il va générer un diagramme en fonction de ces paramètres et enregistrer l'image dans un dossier particulier. Il renvoie alors une chaîne de caractères contenant un url. Cette url est une autre route qui permet de lire l'image sur le site. Chaque image est stocké avec un nom unique (uuid). A chaque requête Flask analyse si il y a plus de 100 images. Si tel est le cas, il en supprime 50 en commençant par les plus vieilles. Ainsi le nombre maximum d'image stocké sur le serveur est de 100 et permet de ne pas surcharger le stockage. </p>
 
         </div>
 
+
+
+
+
+        <div class="part-content">
+            <h2><i class="fas fa-chevron-right chevron-color"></i> Scraper</h2>
+            Ce programme en interface en ligne de commande, permet d'extraire certaines données du site Ultimate Guitar, comme par exemple les 
+            paroles, les accords, la gamme, l'artiste à partir juste de l'URL du site.
+        </div>
+
+
+        <div class='part-content'>
+            <h2><i class="fas fa-chevron-right chevron-color"></i> Explication</h2>
+            Afin d'extraire les données sur ce site, ma première idée était simplement d'utiliser le module <b>requests</b> de Python, qui envoie une requête au serveur qui, lui, renvoie simplement le code html associé.
+            Cependant, dans ce cas, ce module ne marchait pas. En effet, la plupart du code est généré à l'aide de Javascript, de requêtes Ajax etc. 
+            Au final, dans ce que me renvoyait request, je n'avais quasiment que du code Javascript. Pour palier à ça, il a fallu alors trouver un moyen d'exécuter ce javascript et de renvoyer le résultat. 
+            C'est à ça que sert justement le module <b>selenium</b>. Il va ouvrir un navigateur, grâce à un driver (dans mon cas le driver de google chrome), exécuter la page comme si c'était un humain qui naviguait, et renvoyer le résultat. 
+            <br> <br>
+            Une fois ce résultat reçu, j'ai utilisé <b>BeautifulSoup</b> qui permet de dialoguer plus facilement avec le code HTML. Plus exactement, il a des méthodes qui permettent de retrouver toutes les balises, extraire le contenu etc. 
+            Une fois le nom des balises  et la logique du site trouvé, j'entend par là la façon dont les élements parents et enfants sont imbriqués  ou encore comment sont structurées les informations, le texte etc, il suffisait d'extraire les données avec BeautifulSoup.
+            Cependant, les données ne sont pas encore nettoyées, c'est là que les <b>regular expressions</b> entrent en jeu afin d'enlever des caractères indésirables ou juste recupérer ce qu'il y a entre parenthèses.
+            <br> <br>
+            Enfin, j'ai utilisé des arguments en ligne de commande en utilisant argparse, qui permet de les interpréter, afin de simplifier un tant soit peu le processus. 
+
+
+
+        </div>
+
+                <div class='part-content'>
+            <h2><i class="fas fa-chevron-right chevron-color"></i> Arguments disponibles</h2>
+Voici la listes des arguments disponibles pour ce programme : 
+
+<pre><code class="python">usage: scrape.py [-h] [-a] [-j] [-l] [-c] [-p [PATHTOCHROME]] [-i]
+        [-f [FOLDER]]
+        url
+
+positional arguments:
+  url                   url to scrape
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -a, --all_text        Scrape content of the tab
+  -j, --json            Create a json file with multiple infos
+  -l, --lyrics          Scrape only lyrics
+  -c, --chords          Scrape only chords
+  -p [PATHTOCHROME], --pathtochrome [PATHTOCHROME]
+                        Path to chromedriver, In the folder from where the
+                        script is executed by default
+  -i, --ignoresave      Ignore messages concerning overwriting files
+  -f [FOLDER], --folder [FOLDER]
+                        Create folder
+</code></pre>
+
+
+
+        </div>
 
 
     </div>
